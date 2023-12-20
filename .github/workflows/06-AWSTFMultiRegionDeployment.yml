@@ -5,7 +5,7 @@ on:
 jobs:
   Plan_Dev:
     if: github.ref == 'refs/heads/develop'
-    uses: RekhuGopal/gitreusableflows/.github/workflows/aws_tf_plan.yml@develop
+    uses: conover0701/gitreusableflow/.github/workflows/aws_tf_plan.yml@develop
     with:
       path: AWS-Multi-Region-Deployment
       tf_vars_file: dev.tfvars
@@ -15,7 +15,7 @@ jobs:
 
   Deploy_Dev:
     needs: Plan_Dev
-    uses: RekhuGopal/gitreusableflows/.github/workflows/aws_tf_appy.yml@develop
+    uses: conover0701/gitreusableflow/.github/workflows/aws_tf_appy.yml@develop
     with:
       path: AWS-Multi-Region-Deployment
       tf_vars_file: dev.tfvars
