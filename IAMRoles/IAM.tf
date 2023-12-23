@@ -1,5 +1,5 @@
 resource "aws_iam_role_policy" "test_policy" {
-  name = "test_policy"
+  name = var.test_policy
   role = aws_iam_role.test_role.id
 
   # Terraform's "jsonencode" function converts a
